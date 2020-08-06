@@ -83,7 +83,7 @@ void runTest(String TEST_NAME, String CLUSTER_PREFIX) {
             return true
         }
         catch (exc) {
-            if retryCount > 3 {
+            if (retryCount >= 2) {
                 currentBuild.result = 'FAILURE'
                 return true
             }
